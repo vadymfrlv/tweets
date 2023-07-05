@@ -1,3 +1,4 @@
+import { startTransition } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Box } from '../Box/Box';
 
