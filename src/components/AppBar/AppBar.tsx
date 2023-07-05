@@ -1,5 +1,5 @@
 import { startTransition } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Box } from '../Box/Box';
 
 export const AppBar = () => {
