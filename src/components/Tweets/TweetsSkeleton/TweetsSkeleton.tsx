@@ -11,7 +11,7 @@ import {
   Button,
 } from './TweetsSkeleton.styled';
 
-export const UserItemSkeleton = ({ cards }) => {
+export const TweetsSkeleton = ({ cards }) => {
   return (
     <CardList>
       {Array(cards)

@@ -8,7 +8,7 @@ import { LoadMoreBtn } from '../LoadMoreBtn/LoadMoreBtn';
 
 import { UsersCards } from './TweetsList.styled';
 
-export const UsersList = ({ users }) => {
+export const TweetsList = ({ users }) => {
   const [page, setPage] = useState(1);
   const [usersToShow, setUsersToShow] = useState(users.slice(0, CARDS_PER_PAGE * page));
 
