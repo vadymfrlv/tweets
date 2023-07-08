@@ -1,12 +1,15 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
-const API_URL = 'https://64382a1ff3a0c40814ac6a9b.mockapi.io/api/users';
+import { User } from '../types/types';
+import { API_URL } from '../config/constants';
 
-export const fetchData = async () => {
+export const fetchData = async (): Promise<User[]> => {
   try {
-    const response = await axios.get(API_URL);
-    return response.data;
+    const response: AxiosResponse<User[]> = await axios.get(API_URL, { responseType: 'json' });
+    const { data } = response;
+    return data;
   } catch (error) {
     console.error(error);
+    return [];
   }
 };

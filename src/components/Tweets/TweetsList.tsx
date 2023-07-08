@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { Users } from '../../types/types';
 import { CARDS_PER_PAGE } from '../../config/constants';
 
 import { Box } from '../Box/Box';
@@ -8,7 +9,7 @@ import { LoadMoreBtn } from '../LoadMoreBtn/LoadMoreBtn';
 
 import { UsersCards } from './TweetsList.styled';
 
-export const TweetsList = ({ users }) => {
+export const TweetsList = ({ users }: Users) => {
   const [page, setPage] = useState(1);
   const [usersToShow, setUsersToShow] = useState(users.slice(0, CARDS_PER_PAGE * page));
 
@@ -20,14 +21,14 @@ export const TweetsList = ({ users }) => {
   return (
     <Box paddingBottom="30px">
       <UsersCards>
-        {usersToShow.map(user => (
+        {usersToShow.map(({ id, user, tweets, followers, avatar }) => (
           <TweetsItem
-            key={user.id}
-            id={user.id}
-            user={user.user}
-            tweets={user.tweets}
-            followers={user.followers}
-            avatar={user.avatar}
+            key={id}
+            id={id}
+            user={user}
+            tweets={tweets}
+            followers={followers}
+            avatar={avatar}
           />
         ))}
       </UsersCards>

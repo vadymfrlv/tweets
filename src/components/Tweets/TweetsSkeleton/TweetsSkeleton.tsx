@@ -1,6 +1,8 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
+import { SkeletonCardsProps } from '../../../types/types';
+
 import {
   CardList,
   CardItem,
@@ -11,7 +13,7 @@ import {
   Button,
 } from './TweetsSkeleton.styled';
 
-export const TweetsSkeleton = ({ cards }) => {
+export const TweetsSkeleton = ({ cards }: SkeletonCardsProps) => {
   return (
     <CardList>
       {Array(cards)

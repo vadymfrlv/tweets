@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 
+import { User } from '../types/types';
+
 import { TweetsList } from '../components/Tweets/TweetsList';
 import { fetchData } from '../services/tweets-api';
 import { TweetsSkeleton } from '../components/Tweets/TweetsSkeleton/TweetsSkeleton';
 import { TweetsSkeletonTheme } from '../components/Tweets/TweetsSkeleton/TweetsSkeletonTheme';
 
 const TweetsPage = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { FollowingBtnProps } from '../../../types/types';
+
 export const UserCard = styled.li`
   position: relative;
 
@@ -85,7 +87,7 @@ export const Followers = styled.p`
   margin-top: 16px;
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<FollowingBtnProps>`
   height: 50px;
   width: 196px;
   margin-top: 26px;

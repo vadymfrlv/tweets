@@ -1,4 +1,11 @@
 import { useState, useEffect } from 'react';
+
+import { User } from '../../../types/types';
+
+import logo from '../../../assets/images/svg/card-logo.svg';
+import cardImage from '../../../assets/images/svg/card-image.svg';
+import defaultUserAvatar from '../../../assets/images/svg/default-user-avatar.svg';
+
 import {
   UserCard,
   Logo,
@@ -11,11 +18,7 @@ import {
   Button,
 } from './TweetsItem.styled';
 
-import logo from '../../../assets/images/svg/card-logo.svg';
-import cardImage from '../../../assets/images/svg/card-image.svg';
-import defaultUserAvatar from '../../../assets/images/svg/default-user-avatar.svg';
-
-export const TweetsItem = ({ id, user, followers, tweets, avatar }) => {
+export const TweetsItem = ({ id, user, followers, tweets, avatar }: User) => {
   const [isFollowing, setIsFollowing] = useState(false);
   const [followersCount, setFollowersCount] = useState(followers);
 

@@ -1,6 +1,6 @@
-import { SkeletonTheme } from 'react-loading-skeleton';
+import { SkeletonTheme, SkeletonThemeProps } from 'react-loading-skeleton';
 
-export const TweetsSkeletonTheme = ({ children }) => {
+export const TweetsSkeletonTheme = ({ children }: SkeletonThemeProps) => {
   return (
     <SkeletonTheme
       baseColor="#ebd8ff"
